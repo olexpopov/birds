@@ -1,25 +1,35 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Birds.h"
+#include"Birds.h"
 using namespace std;
+
+
+
+
+
+
+
+
+
 int main()
 {
     BirdManager manager;
     int choice;
 
     while (true) {
-        cout << "1. Add Parrot" << endl;
-        cout << "2. Add Eagle" << endl;
-        cout << "3. Add Penguin" << endl;
-        cout << "4. Add Owl" << endl;
-        cout << "5. Add Swan" << endl;
-        cout << "6. Display All Birds" << endl;
-        cout << "7. Exit" << endl;
+        cout << "1 - Add Parrot" << endl;
+        cout << "2 - Add Eagle" << endl;
+        cout << "3 - Add Penguin" << endl;
+        cout << "4 - Add Owl" << endl;
+        cout << "5 - Add Swan" << endl;
+        cout << "6 - Display All Birds" << endl;
+        cout << "7 - Exit" << endl;
         cout << "Enter your choice: ";
         cin >> choice;
 
-        if (choice == 1) {
+        if (choice == 1) 
+        {
             string name, food;
             double wingSpan;
             cout << "Enter parrot name: ";
@@ -30,7 +40,8 @@ int main()
             cin >> food;
             manager.addBird(new Parrot(name, wingSpan, food));
         }
-        else if (choice == 2) {
+        else if (choice == 2) 
+        {
             string name, food;
             double wingSpan;
             cout << "Enter eagle name: ";
@@ -41,7 +52,8 @@ int main()
             cin >> food;
             manager.addBird(new Eagle(name, wingSpan, food));
         }
-        else if (choice == 3) {
+        else if (choice == 3) 
+        {
             string name, food;
             double wingSpan;
             cout << "Enter penguin name: ";
@@ -54,7 +66,8 @@ int main()
             manager.addBird(new Penguin(name, wingSpan, food));
 
         }
-        else if (choice == 4) {
+        else if (choice == 4) 
+        {
             string name, food;
             double wingSpan;
             cout << "Enter owl name: ";
@@ -67,7 +80,8 @@ int main()
             manager.addBird(new Owl(name, wingSpan, food));
 
         }
-        else if (choice == 5) {
+        else if (choice == 5) 
+        {
             string name, food;
             double wingSpan;
             cout << "Enter swan name: ";
@@ -80,18 +94,20 @@ int main()
             manager.addBird(new Swan(name, wingSpan, food));
 
         }
-        else if (choice == 6) {
+        else if (choice == 6) 
+        {
             manager.displayAllBirds();
 
         }
-        else if (choice == 7) {
+        else if(choice==7)
+ 
+        {
             break;
-
         }
-        else {
+        else 
+        {
             cout << "Incorrect choice. Please try again." << endl;
         }
     }
-
-   
+    
 }
