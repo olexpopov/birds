@@ -90,6 +90,30 @@ public:
         cout << "Swan is gliding gracefully on the water" << endl;
     }
 };
+class BirdManager {
+private:
+    vector<Bird*> birds;
+
+public:
+    ~BirdManager() {
+        for (Bird* bird : birds) {
+            delete bird;
+        }
+    }
+
+    void addBird(Bird* bird) {
+        birds.push_back(bird);
+    }
+
+    void displayAllBirds() const {
+        for (const Bird* bird : birds) {
+            bird->displayInfo();
+            bird->sound();
+            bird->behavior();
+            cout << "////////////////////" << endl;
+        }
+    }
+};
 
 
 
