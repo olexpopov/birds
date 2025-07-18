@@ -30,11 +30,11 @@ This C++ project models various bird species using object-oriented programming p
    cd birds
 Compile the program:
 ```bash
-g++ -o bird_app main.cpp
+g++ -o birds main.cpp
 ```
 
 Run the program:
 ```bash
-./bird_app
+./birds
 ```
 
